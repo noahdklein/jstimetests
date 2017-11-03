@@ -22,21 +22,23 @@ console.log(webColors.length);
 document.getElementById("what-color").innerHTML = randoColor;
 }
 
-// changes color at 1 minute interval
+// changes color and quote at 1 minute interval
 
-function colorChange(func, interval) {
+function intervalChange(func, interval) {
 	var now = new Date,
 	delay = interval - now % interval;
 
 	function start(){
 		changeColor();
+		changeQuote();
 		setInterval(func, interval);
 	}
 	setTimeout(start, delay);
 }
-colorChange(changeColor, 60 * 1000);
+intervalChange(changeColor, 60 * 1000);
+intervalChange(changeQuote, 60 * 1000);
 
-// display quote in randor order
+// display quote in random order
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;
@@ -68,15 +70,3 @@ document.getElementById("quotes").innerHTML = quoteArray.join(" ");
 console.log(quoteArray);
 }
 changeQuote();
-
-function quoteChange(func, interval) {
-	var now = new Date,
-	delay = interval - now % interval;
-
-	function start(){
-		changeQuote();
-		setInterval(func, interval);
-	}
-	setTimeout(start, delay);
-}
-quoteChange(changeQuote, 60 * 1000);
