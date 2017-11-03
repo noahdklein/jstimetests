@@ -28,11 +28,14 @@ footer{
 	padding: 5%;
 
 }
-.quotes{
+#quotes{
 	clear: both;
-	text-align: center;
-	vertical-align: middle;
-	position: absolute;
-	top: 50%;
-	width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    line-height: 1.5;
 }
